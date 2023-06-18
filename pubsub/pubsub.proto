@@ -1,0 +1,14 @@
+//protoc --go_out=. --go-grpc_out=. ./pubsub/*.proto
+syntax = "proto3";
+option go_package = "pubsub/pubsubpb";
+package pubsub;
+
+service Publisher{
+    rpc Publish(PublishRequest) returns (PublishResponse){}
+}
+
+message PublishRequest{
+}
+
+message PublishResponse{
+}
